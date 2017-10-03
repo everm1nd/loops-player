@@ -2,9 +2,11 @@ import React from 'react';
 import 'App.css';
 import Track from "components/Track";
 
-const App = () => <div className="app">
-  <Track key={1} />
-  <Track key={2} />
-</div>
+const App = () => {
+  const tracks = ["Track 1", "Track 2"].map( name =>
+    <Track key={name} name={name} />
+  )
+  return <div className="app">{tracks}</div>
+}
 
 export default App;

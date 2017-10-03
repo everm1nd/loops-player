@@ -18,6 +18,12 @@
   margin-right: 2px;
 }
 
+.track .title {
+  margin-bottom: 12px;
+  color: #777;
+  text-align: center;
+}
+
 .clip {
   display: block;
   width: 100px;
