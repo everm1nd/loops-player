@@ -13,6 +13,11 @@
   opacity: 0.5;
 }
 
+.track {
+  display: inline-block;
+  margin-right: 2px;
+}
+
 .clip {
   display: block;
   width: 100px;
@@ -20,4 +25,5 @@
   background: lightgrey url('components/Clip/play-icon.svg') no-repeat center;
   background-size: 80px;
   cursor: pointer;
+  margin-bottom: 2px;
 }
