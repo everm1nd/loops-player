@@ -1,1 +1,22 @@
+.button {
+  font-size: 15px;
+  user-select: none;
+  border: none;
+  text-decoration: none;
+}
 
+.button:focus {
+  outline: none !important;
+}
+
+.button:active {
+  opacity: 0.5;
+}
+
+.clip {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: lightgrey;
+  cursor: pointer;
+}

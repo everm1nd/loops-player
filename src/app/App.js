@@ -1,6 +1,9 @@
 import React from 'react';
 import 'App.css';
+import Clip from "components/Clip";
 
-const App = () => <div className="app">Hi, I'm your React App</div>
+const App = () => <div className="app">
+  <Clip />
+</div>
 
 export default App;
