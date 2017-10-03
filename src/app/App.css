@@ -17,6 +17,7 @@
   display: block;
   width: 100px;
   height: 100px;
-  background: lightgrey;
+  background: lightgrey url('components/Clip/play-icon.svg') no-repeat center;
+  background-size: 80px;
   cursor: pointer;
 }
