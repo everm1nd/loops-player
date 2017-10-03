@@ -1,9 +1,9 @@
 import React from 'react';
 import 'App.css';
-import Clip from "components/Clip";
+import Track from "components/Track";
 
 const App = () => <div className="app">
-  <Clip />
+  <Track />
 </div>
 
 export default App;
