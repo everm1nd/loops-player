@@ -1,10 +1,11 @@
 import React from 'react';
 import 'App.css';
 import Track from "components/Track";
+import tracksData from "components/Track/data";
 
 const App = () => {
-  const tracks = ["Track 1", "Track 2"].map( name =>
-    <Track key={name} name={name} />
+  const tracks = tracksData.tracks.map( track =>
+    <Track key={track.name} {...track} />
   )
   return <div className="app">{tracks}</div>
 }

@@ -1,9 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Track from 'components/Track';
+import tracksData from "components/Track/data";
 
 describe("Track", () => {
-  const wrapper = shallow(<Track name="Track 1"/>);
+  const clips = [
+    { name: "Funky Clip 1"},
+    { name: "Funky Clip 2"}
+  ];
+  const wrapper = shallow(<Track name="Track 1" clips={clips}/>);
 
   it('renders a track', () => {
     wrapper
