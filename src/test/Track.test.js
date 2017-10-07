@@ -5,8 +5,8 @@ import tracksData from "components/Track/data";
 
 describe("Track", () => {
   const clips = [
-    { name: "Funky Clip 1"},
-    { name: "Funky Clip 2"}
+    { name: "Funky Clip 1", url: 'funk.mp3' },
+    { name: "Funky Clip 2", url: 'funk2.mp3' }
   ];
   const wrapper = shallow(<Track name="Track 1" clips={clips}/>);
 
