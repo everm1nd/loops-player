@@ -3,7 +3,9 @@ import { shallow } from 'enzyme';
 import Clip from 'components/Clip';
 
 describe("Clip", () => {
+  const wrapper = shallow(<Clip />);
+
   it('renders a clip', () => {
-    shallow(<Clip />);
+    expect(wrapper).toMatchSnapshot();
   });
 })
