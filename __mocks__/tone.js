@@ -1,3 +1,7 @@
-const Tone = jest.genMockFromModule('tone');
+const Tone = {
+  Player: jest.fn(() => ({
+    toMaster: jest.fn()
+  }))
+}
 
 export default Tone;
