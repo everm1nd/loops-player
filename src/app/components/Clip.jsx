@@ -6,8 +6,8 @@ const assetPath = url => process.env.PUBLIC_URL + url;
 
 const Clip = ({ url }) => {
   const player = new Tone.Player(assetPath(url)).toMaster();
-  const play = () => { player.start() }
-  return <button className="button clip" onClick={play} />
+  const toggle = () => { player.state === "started" ? player.stop() : player.start() }
+  return <button className="button clip" onClick={toggle} />
 }
 
 export default Clip;
