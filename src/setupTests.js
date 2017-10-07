@@ -6,3 +6,5 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
+
+window.TONE_SILENCE_VERSION_LOGGING = process.env.TONE_SILENCE_VERSION_LOGGING || false
