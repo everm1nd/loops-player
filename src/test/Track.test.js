@@ -8,10 +8,10 @@ describe("Track", () => {
     { name: "Funky Clip 1", url: 'funk.mp3' },
     { name: "Funky Clip 2", url: 'funk2.mp3' }
   ];
-  const wrapper = shallow(<Track name="Track 1" clips={clips}/>);
+  const wrapper = shallow(<Track name="Track 1" clips={clips} onClick={jest.fn()}/>);
 
   it('renders a track', () => {
-    wrapper
+    expect(wrapper).toMatchSnapshot();
   });
 
   it("renders name", () => {

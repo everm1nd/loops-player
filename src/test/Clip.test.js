@@ -4,7 +4,7 @@ import Clip from 'components/Clip';
 import Tone from 'tone';
 
 describe("Clip", () => {
-  const wrapper = shallow(<Clip url="something.wav" onClick={jest.fn()} />);
+  const wrapper = shallow(<Clip id={0} url="something.wav" onClick={jest.fn()} />);
 
   it('renders a clip', () => {
     expect(wrapper).toMatchSnapshot();

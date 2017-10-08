@@ -30,7 +30,7 @@ class Clip extends React.Component {
   }
 
   render() {
-    return <button className="button clip" onClick={this.props.onClick} />
+    return <button className="button clip" onClick={this.props.onClick.bind(null, this.props.id)} />
   }
 }
 
@@ -39,6 +39,7 @@ Clip.defaultProps = {
 }
 
 Clip.propTypes = {
+  id: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
   playbackState: PropTypes.string,
   onClick: PropTypes.func.isRequired

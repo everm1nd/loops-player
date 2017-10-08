@@ -33,6 +33,7 @@ ShallowWrapper {
           }
           id={0}
           name="Track 1"
+          onClick={[Function]}
 />,
         <Track
           clips={
@@ -49,6 +50,7 @@ ShallowWrapper {
           }
           id={1}
           name="Track 2"
+          onClick={[Function]}
 />,
       ],
       "className": "app",
@@ -72,6 +74,7 @@ ShallowWrapper {
           ],
           "id": 0,
           "name": "Track 1",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -94,6 +97,7 @@ ShallowWrapper {
           ],
           "id": 1,
           "name": "Track 2",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -124,6 +128,7 @@ ShallowWrapper {
             }
             id={0}
             name="Track 1"
+            onClick={[Function]}
 />,
           <Track
             clips={
@@ -140,6 +145,7 @@ ShallowWrapper {
             }
             id={1}
             name="Track 2"
+            onClick={[Function]}
 />,
         ],
         "className": "app",
@@ -163,6 +169,7 @@ ShallowWrapper {
             ],
             "id": 0,
             "name": "Track 1",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -185,6 +192,7 @@ ShallowWrapper {
             ],
             "id": 1,
             "name": "Track 2",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,
