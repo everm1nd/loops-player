@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 jest.mock('playbackStateMachine', () => jest.fn().mockReturnValue('magicstate'))
 
 import App from 'App';
+import Tone from 'tone';
 
 describe('App', () => {
   const wrapper = shallow(<App />);
@@ -37,5 +38,20 @@ describe('App', () => {
       wrapper.instance()._tick(0)
       expect(wrapper.state().tracks[0].clips[0].playbackState).toEqual("stopped")
     });
+  });
+
+  describe('componentDidMount', () => {
+    beforeEach(() => {
+      Tone.Transport.scheduleRepeat.mockReset();
+      const wrapper = shallow(<App />);
+    })
+
+    it('sets a scheduleRepeat loop on global transport', () => {
+      expect(Tone.Transport.scheduleRepeat).toHaveBeenCalled();
+    })
+
+    it('starts global transport', () => {
+      expect(Tone.Transport.start).toHaveBeenCalled();
+    })
   });
 })
