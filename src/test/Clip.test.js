@@ -4,26 +4,19 @@ import Clip from 'components/Clip';
 import Tone from 'tone';
 
 describe("Clip", () => {
-  const wrapper = shallow(<Clip url="something.wav" />);
+  const wrapper = shallow(<Clip url="something.wav" onClick={jest.fn()} />);
 
   it('renders a clip', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  describe('when clicked', () => {
-    describe('when clip is stopped', () => {
-      it('plays the sound', () => {
-        wrapper.find('button').simulate('click')
-        expect(wrapper.instance().player.start).toHaveBeenCalled();
-      })
-    })
+  it("plays when props.playbackState == started", () => {
+    wrapper.setProps({ playbackState: "started" })
+    expect(wrapper.instance().player.start).toHaveBeenCalled();
+  })
 
-    describe('when clip is playing', () => {
-      it('stops the sound', () => {
-        wrapper.instance().player.state = 'started'
-        wrapper.find('button').simulate('click')
-        expect(wrapper.instance().player.stop).toHaveBeenCalled();
-      })
-    })
+  it("stops when props.playbackState == stopped", () => {
+    wrapper.setProps({ playbackState: "stopped" })
+    expect(wrapper.instance().player.stop).toHaveBeenCalled();
   })
 })

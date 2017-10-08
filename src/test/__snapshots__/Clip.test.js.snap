@@ -5,6 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Clip
+    onClick={[Function]}
+    playbackState="stopped"
     url="something.wav"
 />,
   Symbol(enzyme.__renderer__): Object {
