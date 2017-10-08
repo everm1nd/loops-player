@@ -13,7 +13,7 @@ describe("Clip", () => {
 
   it("plays when props.playbackState == started", () => {
     wrapper.setProps({ playbackState: "started" })
-    expect(wrapper.instance().player.start).toHaveBeenCalled();
+    expect(wrapper.instance().player.start).toHaveBeenCalledWith('@0.01');
   })
 
   it("stops when props.playbackState == stopped", () => {

@@ -9,7 +9,7 @@ class Clip extends React.Component {
   constructor(props) {
     super(props)
     this.player = new Tone.Player(assetPath(props.url)).toMaster();
-    
+
     this._togglePlayback = this._togglePlayback.bind(this)
     this.handleClick = this.props.onClick.bind(null, this.props.id)
   }
@@ -20,7 +20,7 @@ class Clip extends React.Component {
         this.player.stop()
         break;
       case 'started':
-        this.player.start()
+        this.player.start('@0.01')
         break;
       default:
         break;
