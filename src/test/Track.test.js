@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Track from 'components/Track';
-import tracksData from "components/Track/data";
+import tracksData from "appData";
 
 describe("Track", () => {
   const clips = [
