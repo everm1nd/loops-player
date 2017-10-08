@@ -10,8 +10,20 @@ describe("Clip", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('plays the sound when clicked', () => {
-    wrapper.find('button').simulate('click')
-    expect(wrapper.instance().player.start).toHaveBeenCalled();
+  describe('when clicked', () => {
+    describe('when clip is stopped', () => {
+      it('plays the sound', () => {
+        wrapper.find('button').simulate('click')
+        expect(wrapper.instance().player.start).toHaveBeenCalled();
+      })
+    })
+
+    describe('when clip is playing', () => {
+      it('stops the sound', () => {
+        wrapper.instance().player.state = 'started'
+        wrapper.find('button').simulate('click')
+        expect(wrapper.instance().player.stop).toHaveBeenCalled();
+      })
+    })
   })
 })
