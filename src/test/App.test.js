@@ -1,5 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+
+jest.mock('playbackStateMachine', () => jest.fn().mockReturnValue('magicstate'))
+
 import App from 'App';
 
 describe('App', () => {
@@ -10,17 +13,9 @@ describe('App', () => {
   })
 
   describe('._handleClipClick', () => {
-    it('change playbackStatus of selected clip', () => {
+    it('assigns state from playbackStateMachine to clip state', () => {
       wrapper.instance()._handleClipClick(0,0)
-      expect(wrapper.state().tracks[0].clips[0].playbackState).toEqual('started')
-    })
-
-    it('change playbackStatus of selected clip', () => {
-      const state = Object.assign({}, wrapper.state())
-      state.tracks[0].clips[0].playbackState = 'started'
-      wrapper.setState(state)
-      wrapper.instance()._handleClipClick(0,0)
-      expect(wrapper.state().tracks[0].clips[0].playbackState).toEqual('stopped')
+      expect(wrapper.state().tracks[0].clips[0].playbackState).toEqual('magicstate')
     })
   })
 })

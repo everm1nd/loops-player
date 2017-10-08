@@ -23,10 +23,12 @@ ShallowWrapper {
                     Array [
                               Object {
                                 "name": "Funky Clip 1",
+                                "playbackState": "stopped",
                                 "url": "/media/drum-loop-1.wav",
                               },
                               Object {
                                 "name": "Funky Clip 2",
+                                "playbackState": "stopped",
                                 "url": "/media/drum-loop-1.wav",
                               },
                             ]
@@ -40,10 +42,12 @@ ShallowWrapper {
                     Array [
                               Object {
                                 "name": "Soft Clip 1",
+                                "playbackState": "stopped",
                                 "url": "/media/drum-loop-1.wav",
                               },
                               Object {
                                 "name": "Soft Clip 2",
+                                "playbackState": "stopped",
                                 "url": "/media/drum-loop-1.wav",
                               },
                             ]
@@ -65,10 +69,12 @@ ShallowWrapper {
           "clips": Array [
             Object {
               "name": "Funky Clip 1",
+              "playbackState": "stopped",
               "url": "/media/drum-loop-1.wav",
             },
             Object {
               "name": "Funky Clip 2",
+              "playbackState": "stopped",
               "url": "/media/drum-loop-1.wav",
             },
           ],
@@ -88,10 +94,12 @@ ShallowWrapper {
           "clips": Array [
             Object {
               "name": "Soft Clip 1",
+              "playbackState": "stopped",
               "url": "/media/drum-loop-1.wav",
             },
             Object {
               "name": "Soft Clip 2",
+              "playbackState": "stopped",
               "url": "/media/drum-loop-1.wav",
             },
           ],
@@ -118,10 +126,12 @@ ShallowWrapper {
                         Array [
                                     Object {
                                       "name": "Funky Clip 1",
+                                      "playbackState": "stopped",
                                       "url": "/media/drum-loop-1.wav",
                                     },
                                     Object {
                                       "name": "Funky Clip 2",
+                                      "playbackState": "stopped",
                                       "url": "/media/drum-loop-1.wav",
                                     },
                                   ]
@@ -135,10 +145,12 @@ ShallowWrapper {
                         Array [
                                     Object {
                                       "name": "Soft Clip 1",
+                                      "playbackState": "stopped",
                                       "url": "/media/drum-loop-1.wav",
                                     },
                                     Object {
                                       "name": "Soft Clip 2",
+                                      "playbackState": "stopped",
                                       "url": "/media/drum-loop-1.wav",
                                     },
                                   ]
@@ -160,10 +172,12 @@ ShallowWrapper {
             "clips": Array [
               Object {
                 "name": "Funky Clip 1",
+                "playbackState": "stopped",
                 "url": "/media/drum-loop-1.wav",
               },
               Object {
                 "name": "Funky Clip 2",
+                "playbackState": "stopped",
                 "url": "/media/drum-loop-1.wav",
               },
             ],
@@ -183,10 +197,12 @@ ShallowWrapper {
             "clips": Array [
               Object {
                 "name": "Soft Clip 1",
+                "playbackState": "stopped",
                 "url": "/media/drum-loop-1.wav",
               },
               Object {
                 "name": "Soft Clip 2",
+                "playbackState": "stopped",
                 "url": "/media/drum-loop-1.wav",
               },
             ],
