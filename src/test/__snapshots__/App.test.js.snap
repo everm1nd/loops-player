@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders an app 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Track
+          clips={
+                    Array [
+                              Object {
+                                "name": "Funky Clip 1",
+                                "url": "/media/drum-loop-1.wav",
+                              },
+                              Object {
+                                "name": "Funky Clip 2",
+                                "url": "/media/drum-loop-1.wav",
+                              },
+                            ]
+          }
+          id={0}
+          name="Track 1"
+/>,
+        <Track
+          clips={
+                    Array [
+                              Object {
+                                "name": "Soft Clip 1",
+                                "url": "/media/drum-loop-1.wav",
+                              },
+                              Object {
+                                "name": "Soft Clip 2",
+                                "url": "/media/drum-loop-1.wav",
+                              },
+                            ]
+          }
+          id={1}
+          name="Track 2"
+/>,
+      ],
+      "className": "app",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "Track 1",
+        "nodeType": "function",
+        "props": Object {
+          "clips": Array [
+            Object {
+              "name": "Funky Clip 1",
+              "url": "/media/drum-loop-1.wav",
+            },
+            Object {
+              "name": "Funky Clip 2",
+              "url": "/media/drum-loop-1.wav",
+            },
+          ],
+          "id": 0,
+          "name": "Track 1",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Track 2",
+        "nodeType": "function",
+        "props": Object {
+          "clips": Array [
+            Object {
+              "name": "Soft Clip 1",
+              "url": "/media/drum-loop-1.wav",
+            },
+            Object {
+              "name": "Soft Clip 2",
+              "url": "/media/drum-loop-1.wav",
+            },
+          ],
+          "id": 1,
+          "name": "Track 2",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Track
+            clips={
+                        Array [
+                                    Object {
+                                      "name": "Funky Clip 1",
+                                      "url": "/media/drum-loop-1.wav",
+                                    },
+                                    Object {
+                                      "name": "Funky Clip 2",
+                                      "url": "/media/drum-loop-1.wav",
+                                    },
+                                  ]
+            }
+            id={0}
+            name="Track 1"
+/>,
+          <Track
+            clips={
+                        Array [
+                                    Object {
+                                      "name": "Soft Clip 1",
+                                      "url": "/media/drum-loop-1.wav",
+                                    },
+                                    Object {
+                                      "name": "Soft Clip 2",
+                                      "url": "/media/drum-loop-1.wav",
+                                    },
+                                  ]
+            }
+            id={1}
+            name="Track 2"
+/>,
+        ],
+        "className": "app",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Track 1",
+          "nodeType": "function",
+          "props": Object {
+            "clips": Array [
+              Object {
+                "name": "Funky Clip 1",
+                "url": "/media/drum-loop-1.wav",
+              },
+              Object {
+                "name": "Funky Clip 2",
+                "url": "/media/drum-loop-1.wav",
+              },
+            ],
+            "id": 0,
+            "name": "Track 1",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Track 2",
+          "nodeType": "function",
+          "props": Object {
+            "clips": Array [
+              Object {
+                "name": "Soft Clip 1",
+                "url": "/media/drum-loop-1.wav",
+              },
+              Object {
+                "name": "Soft Clip 2",
+                "url": "/media/drum-loop-1.wav",
+              },
+            ],
+            "id": 1,
+            "name": "Track 2",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
