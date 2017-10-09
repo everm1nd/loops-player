@@ -2,22 +2,8 @@ import React from 'react';
 import 'App.css';
 import Track from "components/Track";
 import tracksData from "appData";
-import update from 'immutability-helper';
-import togglePlayback from 'playbackStateMachine'
-import transformCollection from 'utils/collectionTransformer'
+import { initPlaybackState, clickPlaybackState, tickPlaybackState } from 'playbackStateTransformer'
 import Tone from 'tone'
-
-const mapClipsState = (appState, transformation) => (
-  transformCollection(appState, 'tracks', (track) => (
-    transformCollection(track, 'clips', clip => ({ playbackState: transformation(clip.playbackState) }))
-  ))
-)
-
-const initPlaybackState = (appState) => mapClipsState(appState, state => "stopped")
-
-const tickPlaybackState = (appState) => (
-  mapClipsState(appState, togglePlayback.onTick)
-)
 
 class App extends React.Component {
   constructor(props) {
@@ -52,14 +38,10 @@ class App extends React.Component {
   }
 
   _handleClipClick(trackId, clipId) {
-    const state = update(this.state, {
-      tracks: {
-        [trackId]: {
-          clips: { [clipId]: { playbackState: {$apply: togglePlayback.onClick} } }
-        }
-      }
-    })
-    this.setState(state, this._startTransport)
+    this.setState(
+      clickPlaybackState(this.state, { trackId, clipId }),
+      this._startTransport
+    )
   }
 
   renderTracks() {
