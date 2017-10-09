@@ -21,7 +21,6 @@ class App extends React.Component {
     this.state = initPlaybackState(tracksData)
     this._handleClipClick = this._handleClipClick.bind(this)
     this._tick = this._tick.bind(this)
-    this._updateTransportState = this._updateTransportState.bind(this)
   }
 
   componentDidMount() {
@@ -53,7 +52,7 @@ class App extends React.Component {
     ))
   }
 
-  _updateTransportState() {
+  _startTransport() {
     if (Tone.Transport.state === "stopped") Tone.Transport.start()
   }
 
@@ -65,7 +64,7 @@ class App extends React.Component {
         }
       }
     })
-    this.setState(state, this._updateTransportState)
+    this.setState(state, this._startTransport)
   }
 
   renderTracks() {
