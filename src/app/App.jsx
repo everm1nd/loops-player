@@ -40,29 +40,21 @@ class App extends React.Component {
           return playbackState
       }
     }), () => {
-      if (this._noClipsArePlaying()) {
+      if (this._allClipsStopped()) {
         Tone.Transport.stop()
         Tone.Transport.cancel()
       }
     })
   }
 
-  _anyClipIsPlaying() {
-    return this.state.tracks.some((track) => (
-      track.clips.some(clip => clip.playbackState === "starting")
-    ))
-  }
-
-  _noClipsArePlaying() {
+  _allClipsStopped() {
     return this.state.tracks.every((track) => (
       track.clips.every(clip => clip.playbackState === "stopped")
     ))
   }
 
   _updateTransportState() {
-    if (this._anyClipIsPlaying() && Tone.Transport.state === "stopped") {
-      Tone.Transport.start()
-    }
+    if (Tone.Transport.state === "stopped") Tone.Transport.start()
   }
 
   _handleClipClick(trackId, clipId) {
