@@ -21,12 +21,10 @@ class App extends React.Component {
 
   _tick(time) {
     console.log(Tone.Transport.seconds.toFixed(2))
-    this.setState(tickPlaybackState, () => {
-      if (this._allClipsStopped()) {
-        Tone.Transport.stop()
-        Tone.Transport.cancel()
-      }
-    })
+    this.setState(
+      tickPlaybackState,
+      this._stopTransportUnlessPlaying
+    )
   }
 
   _allClipsStopped() {
@@ -37,6 +35,13 @@ class App extends React.Component {
 
   _startTransport() {
     if (Tone.Transport.state === "stopped") Tone.Transport.start()
+  }
+
+  _stopTransportUnlessPlaying() {
+    if (this._allClipsStopped()) {
+      Tone.Transport.stop()
+      Tone.Transport.cancel()
+    }
   }
 
   _handleClipClick(trackId, clipId) {
