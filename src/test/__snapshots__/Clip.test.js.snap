@@ -22,7 +22,7 @@ ShallowWrapper {
     "key": null,
     "nodeType": "host",
     "props": Object {
-      "className": "button clip",
+      "className": "button clip stopped",
       "onClick": [Function],
     },
     "ref": null,
@@ -35,7 +35,7 @@ ShallowWrapper {
       "key": null,
       "nodeType": "host",
       "props": Object {
-        "className": "button clip",
+        "className": "button clip stopped",
         "onClick": [Function],
       },
       "ref": null,

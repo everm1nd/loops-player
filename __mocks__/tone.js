@@ -6,7 +6,10 @@ const Tone = {
   })),
   Transport: {
     scheduleRepeat: jest.fn(),
-    start: jest.fn()
+    start: jest.fn(),
+    stop: jest.fn(),
+    cancel: jest.fn(),
+    seconds: 0
   }
 }
 

@@ -49,9 +49,5 @@ describe('App', () => {
     it('sets a scheduleRepeat loop on global transport', () => {
       expect(Tone.Transport.scheduleRepeat).toHaveBeenCalled();
     })
-
-    it('starts global transport', () => {
-      expect(Tone.Transport.start).toHaveBeenCalled();
-    })
   });
 })

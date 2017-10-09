@@ -9,6 +9,7 @@ class Clip extends React.Component {
   constructor(props) {
     super(props)
     this.player = new Tone.Player(assetPath(props.url)).toMaster();
+    this.player.loop = true;
 
     this._togglePlayback = this._togglePlayback.bind(this)
     this.handleClick = this.props.onClick.bind(null, this.props.id)

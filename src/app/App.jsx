@@ -21,15 +21,15 @@ class App extends React.Component {
     this.state = initPlaybackState(tracksData)
     this._handleClipClick = this._handleClipClick.bind(this)
     this._tick = this._tick.bind(this)
+    this._updateTransportState = this._updateTransportState.bind(this)
   }
 
   componentDidMount() {
     Tone.Transport.scheduleRepeat(this._tick, "1m");
-    Tone.Transport.start()
   }
 
   _tick(time) {
-    console.log(time)
+    console.log(Tone.Transport.seconds.toFixed(2))
     this.setState(mapClipsState(this.state, (playbackState) => {
       switch (playbackState) {
         case "starting":
@@ -39,7 +39,30 @@ class App extends React.Component {
         default:
           return playbackState
       }
-    }))
+    }), () => {
+      if (this._noClipsArePlaying()) {
+        Tone.Transport.stop()
+        Tone.Transport.cancel()
+      }
+    })
+  }
+
+  _anyClipIsPlaying() {
+    return this.state.tracks.some((track) => (
+      track.clips.some(clip => clip.playbackState === "starting")
+    ))
+  }
+
+  _noClipsArePlaying() {
+    return this.state.tracks.every((track) => (
+      track.clips.every(clip => clip.playbackState === "stopped")
+    ))
+  }
+
+  _updateTransportState() {
+    if (this._anyClipIsPlaying() && Tone.Transport.state === "stopped") {
+      Tone.Transport.start()
+    }
   }
 
   _handleClipClick(trackId, clipId) {
@@ -50,7 +73,7 @@ class App extends React.Component {
         }
       }
     })
-    this.setState(state)
+    this.setState(state, this._updateTransportState)
   }
 
   renderTracks() {
