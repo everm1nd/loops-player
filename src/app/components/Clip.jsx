@@ -32,7 +32,7 @@ class Clip extends React.Component {
   }
 
   render() {
-    return <button className="button clip" onClick={this.handleClick} />
+    return <button className={`button clip ${this.props.playbackState}`} onClick={this.handleClick} />
   }
 }
 

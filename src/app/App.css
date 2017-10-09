@@ -33,3 +33,15 @@
   cursor: pointer;
   margin-bottom: 2px;
 }
+
+.clip.starting {
+  background-color: yellow;
+}
+
+.clip.started {
+  background-color: deeppink;
+}
+
+.clip.stopping {
+  background-color: orange;
+}
