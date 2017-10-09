@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-jest.mock('playbackStateMachine', () => jest.fn().mockReturnValue('magicstate'))
+import togglePlayback from 'playbackStateMachine'
+togglePlayback.onClick = jest.fn().mockReturnValue('magicstate')
 
 import App from 'App';
 import Tone from 'tone';

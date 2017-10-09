@@ -7,13 +7,17 @@ import togglePlayback from 'playbackStateMachine'
 import transformCollection from 'utils/collectionTransformer'
 import Tone from 'tone'
 
-const mapClipsState = (tracksData, transformation) => (
-  transformCollection(tracksData, 'tracks', (track) => (
+const mapClipsState = (appState, transformation) => (
+  transformCollection(appState, 'tracks', (track) => (
     transformCollection(track, 'clips', clip => ({ playbackState: transformation(clip.playbackState) }))
   ))
 )
 
-const initPlaybackState = (tracksData) => mapClipsState(tracksData, state => "stopped")
+const initPlaybackState = (appState) => mapClipsState(appState, state => "stopped")
+
+const tickPlaybackState = (appState) => (
+  mapClipsState(appState, togglePlayback.onTick)
+)
 
 class App extends React.Component {
   constructor(props) {
@@ -29,16 +33,7 @@ class App extends React.Component {
 
   _tick(time) {
     console.log(Tone.Transport.seconds.toFixed(2))
-    this.setState(mapClipsState(this.state, (playbackState) => {
-      switch (playbackState) {
-        case "starting":
-          return "started"
-        case "stopping":
-          return "stopped"
-        default:
-          return playbackState
-      }
-    }), () => {
+    this.setState(tickPlaybackState, () => {
       if (this._allClipsStopped()) {
         Tone.Transport.stop()
         Tone.Transport.cancel()
@@ -60,7 +55,7 @@ class App extends React.Component {
     const state = update(this.state, {
       tracks: {
         [trackId]: {
-          clips: { [clipId]: { playbackState: {$apply: togglePlayback} } }
+          clips: { [clipId]: { playbackState: {$apply: togglePlayback.onClick} } }
         }
       }
     })
