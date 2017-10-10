@@ -9,7 +9,8 @@ const Tone = {
     start: jest.fn(),
     stop: jest.fn(),
     cancel: jest.fn(),
-    seconds: 0
+    seconds: 0,
+    bpm: {}
   }
 }
 

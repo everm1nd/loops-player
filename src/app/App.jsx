@@ -5,7 +5,8 @@ import tracksData from "appData";
 import { initPlaybackState, clickPlaybackState, tickPlaybackState } from 'playbackStateTransformer'
 import Tone from 'tone'
 
-const QUANTIZATION = "1m"
+const QUANTIZATION = "2m"
+const BPM = 110;
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    Tone.Transport.bpm.value = BPM;
     Tone.Transport.scheduleRepeat(this._tick, QUANTIZATION);
   }
 
