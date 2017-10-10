@@ -47,8 +47,7 @@ class App extends React.Component {
   }
 
   _handleClipClick(trackId, clipId) {
-    this.setState(
-      startTransition(this.state, { trackId, clipId }),
+    this.setState(prevState => startTransition(prevState, { trackId, clipId }),
       this._startTransport
     )
   }
