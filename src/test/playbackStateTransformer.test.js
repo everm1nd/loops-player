@@ -30,8 +30,8 @@ describe('playbackStateTransformer', () => {
     it("set playbackState of all clips to stopped", () => {
       expect(initPlaybackState(state)).toEqual({
         tracks: [
-          { clips: [{ playbackState: "stopped" }] },
-          { clips: [{ playbackState: "stopped" }] }
+          { id: 0, clips: [{ id: 0, playbackState: "stopped" }] },
+          { id: 1, clips: [{ id: 0, playbackState: "stopped" }] }
         ]
       })
     });

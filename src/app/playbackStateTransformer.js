@@ -2,6 +2,15 @@ import update from 'immutability-helper';
 import transformNestedCollection from 'utils/nestedCollectionTransformer'
 import togglePlayback from 'playbackStateMachine'
 
+const _initIndex = (appState) => (
+  transformNestedCollection(appState, 'tracks', (track, index) => (
+    {
+      id: index,
+      ...transformNestedCollection(track, 'clips', (clip, index) => ({ id: index }))
+    }
+  ))
+)
+
 const _mapClipsState = (appState, transformation) => (
   transformNestedCollection(appState, 'tracks', (track) => (
     transformNestedCollection(track, 'clips', clip => ({ playbackState: transformation(track, clip) }))
@@ -33,7 +42,7 @@ const _transitionDependentStates = ( appState, { trackId, clipId } ) => {
   return _transitionOtherClips( dependentStates, appState, { trackId, clipId } )
 }
 
-const initPlaybackState = appState => _mapClipsState(appState, (track, clip) => "stopped")
+const initPlaybackState = appState => _mapClipsState(_initIndex(appState), (track, clip) => "stopped")
 const tickPlaybackState = appState => _mapClipsState(appState, (track, clip) => togglePlayback.onTick(clip.playbackState))
 const clickPlaybackState = ( appState, { trackId, clipId } ) => {
   let state = _transitionClip(appState, { trackId, clipId })

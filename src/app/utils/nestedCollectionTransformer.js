@@ -3,10 +3,10 @@
 const transformNestedCollection = (object, key, transformation) => (
   {
     ...object,
-    [key]: object[key].map((element) => (
+    [key]: object[key].map((element, index) => (
       {
         ...element,
-        ...transformation(element)
+        ...transformation(element, index)
       }
     ))
   }
