@@ -8,15 +8,18 @@ ShallowWrapper {
     clips={
         Array [
             Object {
+              "id": 0,
               "name": "Funky Clip 1",
               "url": "funk.mp3",
             },
             Object {
+              "id": 1,
               "name": "Funky Clip 2",
               "url": "funk2.mp3",
             },
           ]
     }
+    id={0}
     name="Track 1"
     onClick={[Function]}
 />,

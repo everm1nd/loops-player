@@ -5,10 +5,10 @@ import tracksData from "appData";
 
 describe("Track", () => {
   const clips = [
-    { name: "Funky Clip 1", url: 'funk.mp3' },
-    { name: "Funky Clip 2", url: 'funk2.mp3' }
+    { id: 0, name: "Funky Clip 1", url: 'funk.mp3' },
+    { id: 1, name: "Funky Clip 2", url: 'funk2.mp3' }
   ];
-  const wrapper = shallow(<Track name="Track 1" clips={clips} onClick={jest.fn()}/>);
+  const wrapper = shallow(<Track id={0} name="Track 1" clips={clips} onClick={jest.fn()}/>);
 
   it('renders a track', () => {
     expect(wrapper).toMatchSnapshot();
