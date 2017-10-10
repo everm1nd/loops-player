@@ -22,38 +22,54 @@ ShallowWrapper {
           clips={
                     Array [
                               Object {
+                                "id": 0,
                                 "name": "Funky Clip 1",
                                 "playbackState": "stopped",
-                                "url": "/media/drum-loop-1.wav",
+                                "url": "/media/drums-1.wav",
                               },
                               Object {
+                                "id": 1,
                                 "name": "Funky Clip 2",
                                 "playbackState": "stopped",
-                                "url": "/media/drum-loop-1.wav",
+                                "url": "/media/drums-2.wav",
+                              },
+                              Object {
+                                "id": 2,
+                                "name": "Funky Clip 3",
+                                "playbackState": "stopped",
+                                "url": "/media/drums-1.wav",
                               },
                             ]
           }
           id={0}
-          name="Track 1"
+          name="Drums"
           onClick={[Function]}
 />,
         <Track
           clips={
                     Array [
                               Object {
+                                "id": 0,
                                 "name": "Soft Clip 1",
                                 "playbackState": "stopped",
-                                "url": "/media/drum-loop-1.wav",
+                                "url": "/media/melody-1.wav",
                               },
                               Object {
+                                "id": 1,
                                 "name": "Soft Clip 2",
                                 "playbackState": "stopped",
-                                "url": "/media/drum-loop-1.wav",
+                                "url": "/media/melody-1.wav",
+                              },
+                              Object {
+                                "id": 2,
+                                "name": "Soft Clip 3",
+                                "playbackState": "stopped",
+                                "url": "/media/melody-1.wav",
                               },
                             ]
           }
           id={1}
-          name="Track 2"
+          name="Melody"
           onClick={[Function]}
 />,
       ],
@@ -63,23 +79,31 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "Track 1",
+        "key": "Drums",
         "nodeType": "function",
         "props": Object {
           "clips": Array [
             Object {
+              "id": 0,
               "name": "Funky Clip 1",
               "playbackState": "stopped",
-              "url": "/media/drum-loop-1.wav",
+              "url": "/media/drums-1.wav",
             },
             Object {
+              "id": 1,
               "name": "Funky Clip 2",
               "playbackState": "stopped",
-              "url": "/media/drum-loop-1.wav",
+              "url": "/media/drums-2.wav",
+            },
+            Object {
+              "id": 2,
+              "name": "Funky Clip 3",
+              "playbackState": "stopped",
+              "url": "/media/drums-1.wav",
             },
           ],
           "id": 0,
-          "name": "Track 1",
+          "name": "Drums",
           "onClick": [Function],
         },
         "ref": null,
@@ -88,23 +112,31 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "Track 2",
+        "key": "Melody",
         "nodeType": "function",
         "props": Object {
           "clips": Array [
             Object {
+              "id": 0,
               "name": "Soft Clip 1",
               "playbackState": "stopped",
-              "url": "/media/drum-loop-1.wav",
+              "url": "/media/melody-1.wav",
             },
             Object {
+              "id": 1,
               "name": "Soft Clip 2",
               "playbackState": "stopped",
-              "url": "/media/drum-loop-1.wav",
+              "url": "/media/melody-1.wav",
+            },
+            Object {
+              "id": 2,
+              "name": "Soft Clip 3",
+              "playbackState": "stopped",
+              "url": "/media/melody-1.wav",
             },
           ],
           "id": 1,
-          "name": "Track 2",
+          "name": "Melody",
           "onClick": [Function],
         },
         "ref": null,
@@ -125,38 +157,54 @@ ShallowWrapper {
             clips={
                         Array [
                                     Object {
+                                      "id": 0,
                                       "name": "Funky Clip 1",
                                       "playbackState": "stopped",
-                                      "url": "/media/drum-loop-1.wav",
+                                      "url": "/media/drums-1.wav",
                                     },
                                     Object {
+                                      "id": 1,
                                       "name": "Funky Clip 2",
                                       "playbackState": "stopped",
-                                      "url": "/media/drum-loop-1.wav",
+                                      "url": "/media/drums-2.wav",
+                                    },
+                                    Object {
+                                      "id": 2,
+                                      "name": "Funky Clip 3",
+                                      "playbackState": "stopped",
+                                      "url": "/media/drums-1.wav",
                                     },
                                   ]
             }
             id={0}
-            name="Track 1"
+            name="Drums"
             onClick={[Function]}
 />,
           <Track
             clips={
                         Array [
                                     Object {
+                                      "id": 0,
                                       "name": "Soft Clip 1",
                                       "playbackState": "stopped",
-                                      "url": "/media/drum-loop-1.wav",
+                                      "url": "/media/melody-1.wav",
                                     },
                                     Object {
+                                      "id": 1,
                                       "name": "Soft Clip 2",
                                       "playbackState": "stopped",
-                                      "url": "/media/drum-loop-1.wav",
+                                      "url": "/media/melody-1.wav",
+                                    },
+                                    Object {
+                                      "id": 2,
+                                      "name": "Soft Clip 3",
+                                      "playbackState": "stopped",
+                                      "url": "/media/melody-1.wav",
                                     },
                                   ]
             }
             id={1}
-            name="Track 2"
+            name="Melody"
             onClick={[Function]}
 />,
         ],
@@ -166,23 +214,31 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "Track 1",
+          "key": "Drums",
           "nodeType": "function",
           "props": Object {
             "clips": Array [
               Object {
+                "id": 0,
                 "name": "Funky Clip 1",
                 "playbackState": "stopped",
-                "url": "/media/drum-loop-1.wav",
+                "url": "/media/drums-1.wav",
               },
               Object {
+                "id": 1,
                 "name": "Funky Clip 2",
                 "playbackState": "stopped",
-                "url": "/media/drum-loop-1.wav",
+                "url": "/media/drums-2.wav",
+              },
+              Object {
+                "id": 2,
+                "name": "Funky Clip 3",
+                "playbackState": "stopped",
+                "url": "/media/drums-1.wav",
               },
             ],
             "id": 0,
-            "name": "Track 1",
+            "name": "Drums",
             "onClick": [Function],
           },
           "ref": null,
@@ -191,23 +247,31 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "Track 2",
+          "key": "Melody",
           "nodeType": "function",
           "props": Object {
             "clips": Array [
               Object {
+                "id": 0,
                 "name": "Soft Clip 1",
                 "playbackState": "stopped",
-                "url": "/media/drum-loop-1.wav",
+                "url": "/media/melody-1.wav",
               },
               Object {
+                "id": 1,
                 "name": "Soft Clip 2",
                 "playbackState": "stopped",
-                "url": "/media/drum-loop-1.wav",
+                "url": "/media/melody-1.wav",
+              },
+              Object {
+                "id": 2,
+                "name": "Soft Clip 3",
+                "playbackState": "stopped",
+                "url": "/media/melody-1.wav",
               },
             ],
             "id": 1,
-            "name": "Track 2",
+            "name": "Melody",
             "onClick": [Function],
           },
           "ref": null,
