@@ -1,7 +1,18 @@
 jest.mock('playbackStateMachine', () => (
   {
     onTick: jest.fn().mockReturnValue('foo'),
-    onClick: jest.fn().mockReturnValue('bar')
+    onClick: jest.fn((state) => {
+      switch (state) {
+        case "foo":
+          return {
+            result: "bar"
+          }
+        case "bar":
+          return {
+            result: "foo"
+          }
+      }
+    })
   }
 ))
 
@@ -39,10 +50,14 @@ describe('playbackStateTransformer', () => {
 
   describe('.clickPlaybackState', () => {
     it('updates state of selected clip with value from state machine', () => {
-      expect(clickPlaybackState(state, { trackId: 0, clipId: 0 })).toEqual({
+      const beforeClickState = {
         tracks: [
-          { clips: [{ playbackState: "bar" }] },
-          { clips: [{}] }
+          { clips: [{ playbackState: "foo" }] }
+        ]
+      }
+      expect(clickPlaybackState(beforeClickState, { trackId: 0, clipId: 0 })).toEqual({
+        tracks: [
+          { clips: [{ playbackState: "bar" }] }
         ]
       })
     });

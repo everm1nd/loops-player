@@ -8,59 +8,36 @@ const _mapClipsState = (appState, transformation) => (
   ))
 )
 
+const _nextStateAfterClick = (playbackState) => togglePlayback.onClick(playbackState).result
+
 const _transitionClip = ( appState, { trackId, clipId }) => (
   update(appState, {
     tracks: {
       [trackId]: {
-        clips: { [clipId]: { playbackState: {$apply: togglePlayback.onClick} } }
+        clips: { [clipId]: { playbackState: {$apply: _nextStateAfterClick } } }
       }
     }
   })
 )
 
-const _transitionOtherClips = ( playbackState, appState, { trackId, clipId } ) => (
+const _transitionOtherClips = ( playbackStates, appState, { trackId, clipId } ) => (
   _mapClipsState( appState, (track, clip) =>
-    clip.playbackState === playbackState && track.id === trackId && clip.id !== clipId ?
-      togglePlayback.onClick(clip.playbackState) :
-      clip.playbackState
+    playbackStates.includes(clip.playbackState) && track.id === trackId && clip.id !== clipId ?
+      _nextStateAfterClick(clip.playbackState) : clip.playbackState
   )
 )
 
-const _cancelStarting = _transitionOtherClips.bind(null, "starting")
-const _cancelStarted = _transitionOtherClips.bind(null, "started")
-const _cancelStopping = _transitionOtherClips.bind(null, "stopping")
+const _transitionDependentStates = ( appState, { trackId, clipId } ) => {
+  const clip = appState.tracks[trackId].clips[clipId]
+  const dependentStates = togglePlayback.onClick(clip.playbackState).dependentStates || []
+  return _transitionOtherClips( dependentStates, appState, { trackId, clipId } )
+}
 
 const initPlaybackState = appState => _mapClipsState(appState, (track, clip) => "stopped")
 const tickPlaybackState = appState => _mapClipsState(appState, (track, clip) => togglePlayback.onTick(clip.playbackState))
 const clickPlaybackState = ( appState, { trackId, clipId } ) => {
-  let state = appState
-  // state = _cancelStarting(state, { trackId, clipId } )
-  // state = _cancelStarted(state, { trackId, clipId } )
-  state = _transitionClip(state, { trackId, clipId } )
-  switch (state.tracks[trackId].clips[clipId].playbackState) {
-    case "starting":
-      // we starting a new clip
-      // this means we need to stop others playing
-      // and stop other transitions
-      state = _cancelStarted(state, { trackId, clipId } )
-      state = _cancelStarting(state, { trackId, clipId } )
-      break;
-    case "stopping":
-      // we stopping a playing clip
-      // nothing needs to be done here
-      break;
-    case "stopped":
-      // we canceled starting transition
-      // this means we need to cancel stop of playing clip
-      state = _cancelStopping(state, { trackId, clipId } )
-      break;
-    case "started":
-      // we canceled stopping transition
-      // this means we need to do nothing
-      break;
-    default:
-      break;
-  }
+  let state = _transitionClip(appState, { trackId, clipId })
+  state = _transitionDependentStates(state, { trackId, clipId })
   return state
 }
 
