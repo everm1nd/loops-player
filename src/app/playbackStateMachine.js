@@ -3,13 +3,24 @@ export default {
   onClick(playbackState) {
     switch (playbackState) {
       case "stopped":
-        return "starting"  // start transition
+        return {
+          result: "starting",
+          dependentStates: ["stopping"]
+        }
       case "starting":
-        return "stopped" // cancel transition
+        return {
+          result: "stopped",
+          dependentStates: ["started", "starting"]
+        }
       case "started":
-        return "stopping" // start transition
+        return {
+          result: "stopping"
+        }
       case "stopping":
-        return "started" // cancel transition
+        return {
+          result: "started",
+          dependentStates: ["starting"]
+        }
       default:
         return playbackState
     }

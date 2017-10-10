@@ -4,21 +4,32 @@ describe("playbackStateMachine", () => {
   describe('onClick', () => {
     describe('transition', () => {
       it('transition stopped clip to starting', () => {
-        expect(togglePlayback.onClick('stopped')).toEqual('starting')
+        expect(togglePlayback.onClick('stopped')).toEqual({
+          result: 'starting',
+          dependentStates: ["stopping"]
+        })
       })
 
       it('transition started clip to stopping', () => {
-        expect(togglePlayback.onClick('started')).toEqual('stopping')
+        expect(togglePlayback.onClick('started')).toEqual({
+          result: 'stopping'
+        })
       })
     })
 
     describe('cancel transition', () => {
       it('transition starting clip to stopped', () => {
-        expect(togglePlayback.onClick('starting')).toEqual('stopped')
+        expect(togglePlayback.onClick('starting')).toEqual({
+          result: 'stopped',
+          dependentStates: ["started", "starting"]
+        })
       })
 
       it('transition stopping clip to started', () => {
-        expect(togglePlayback.onClick('stopping')).toEqual('started')
+        expect(togglePlayback.onClick('stopping')).toEqual({
+          result: 'started',
+          dependentStates: ["starting"]
+        })
       })
     })
 
