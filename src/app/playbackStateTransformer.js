@@ -34,13 +34,32 @@ const initPlaybackState = appState => _mapClipsState(appState, (track, clip) => 
 const tickPlaybackState = appState => _mapClipsState(appState, (track, clip) => togglePlayback.onTick(clip.playbackState))
 const clickPlaybackState = ( appState, { trackId, clipId } ) => {
   let state = appState
-  console.log(trackId, clipId)
-  state = _cancelStarting(state, { trackId, clipId } )
-  state = _cancelStarted(state, { trackId, clipId } )
+  // state = _cancelStarting(state, { trackId, clipId } )
+  // state = _cancelStarted(state, { trackId, clipId } )
   state = _transitionClip(state, { trackId, clipId } )
-  console.log(trackId, clipId, state.tracks[trackId].clips[clipId])
-  if (state.tracks[trackId].clips[clipId].playbackState === "stopped") {
-    state = _cancelStopping(state, { trackId, clipId } )
+  switch (state.tracks[trackId].clips[clipId].playbackState) {
+    case "starting":
+      // we starting a new clip
+      // this means we need to stop others playing
+      // and stop other transitions
+      state = _cancelStarted(state, { trackId, clipId } )
+      state = _cancelStarting(state, { trackId, clipId } )
+      break;
+    case "stopping":
+      // we stopping a playing clip
+      // nothing needs to be done here
+      break;
+    case "stopped":
+      // we canceled starting transition
+      // this means we need to cancel stop of playing clip
+      state = _cancelStopping(state, { trackId, clipId } )
+      break;
+    case "started":
+      // we canceled stopping transition
+      // this means we need to do nothing
+      break;
+    default:
+      break;
   }
   return state
 }
