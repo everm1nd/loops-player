@@ -21,7 +21,7 @@ class Clip extends React.Component {
         this.player.stop()
         break;
       case 'started':
-        this.player.start('@0.01')
+        if (this.player.state !== "started") this.player.start('@0.01')
         break;
       default:
         break;
