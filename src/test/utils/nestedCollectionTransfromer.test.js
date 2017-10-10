@@ -1,6 +1,6 @@
-import transformCollection from 'utils/collectionTransformer'
+import transformNestedCollection from 'utils/nestedCollectionTransformer'
 
-describe('transformCollection', () => {
+describe('transformNestedCollection', () => {
   it('updates collection', () => {
     const collection = {
       elements: [
@@ -8,7 +8,7 @@ describe('transformCollection', () => {
         { foo: 2, bar: 3 }
       ]
     }
-    expect(transformCollection(collection, 'elements', (element) => (
+    expect(transformNestedCollection(collection, 'elements', (element) => (
       {
         foo: element.foo + 10
       }
@@ -31,8 +31,8 @@ describe('transformCollection', () => {
         }
       ]
     }
-    expect(transformCollection(collection, 'elements', (element) => (
-      transformCollection(element, 'nestedElements', e => ({ bar: e.bar + 100 }))
+    expect(transformNestedCollection(collection, 'elements', (element) => (
+      transformNestedCollection(element, 'nestedElements', e => ({ bar: e.bar + 100 }))
     ))).toEqual({
       elements: [
         {

@@ -1,9 +1,9 @@
 // TODO: extend it to accept key chains like 'foo.bar' and process
 // them recursively
-const transformCollection = (collection, key, transformation) => (
+const transformNestedCollection = (object, key, transformation) => (
   {
-    ...collection,
-    [key]: collection[key].map((element) => (
+    ...object,
+    [key]: object[key].map((element) => (
       {
         ...element,
         ...transformation(element)
@@ -12,4 +12,4 @@ const transformCollection = (collection, key, transformation) => (
   }
 )
 
-export default transformCollection
+export default transformNestedCollection

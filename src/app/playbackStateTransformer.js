@@ -1,10 +1,10 @@
 import update from 'immutability-helper';
-import transformCollection from 'utils/collectionTransformer'
+import transformNestedCollection from 'utils/nestedCollectionTransformer'
 import togglePlayback from 'playbackStateMachine'
 
 const _mapClipsState = (appState, transformation) => (
-  transformCollection(appState, 'tracks', (track) => (
-    transformCollection(track, 'clips', clip => ({ playbackState: transformation(track, clip) }))
+  transformNestedCollection(appState, 'tracks', (track) => (
+    transformNestedCollection(track, 'clips', clip => ({ playbackState: transformation(track, clip) }))
   ))
 )
 
