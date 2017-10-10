@@ -43,8 +43,8 @@ const _transitionDependentStates = ( appState, { trackId, clipId } ) => {
 }
 
 const initPlaybackState = appState => _mapClipsState(_initIndex(appState), (track, clip) => "stopped")
-const tickPlaybackState = appState => _mapClipsState(appState, (track, clip) => togglePlayback.onTick(clip.playbackState))
-const clickPlaybackState = ( appState, { trackId, clipId } ) => {
+const finalizeTransition = appState => _mapClipsState(appState, (track, clip) => togglePlayback.onTick(clip.playbackState))
+const startTransition = ( appState, { trackId, clipId } ) => {
   let state = _transitionClip(appState, { trackId, clipId })
   state = _transitionDependentStates(state, { trackId, clipId })
   return state
@@ -52,6 +52,6 @@ const clickPlaybackState = ( appState, { trackId, clipId } ) => {
 
 export {
   initPlaybackState,
-  tickPlaybackState,
-  clickPlaybackState
+  finalizeTransition,
+  startTransition
 }

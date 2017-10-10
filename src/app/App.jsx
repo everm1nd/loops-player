@@ -2,7 +2,7 @@ import React from 'react';
 import 'App.css';
 import Track from "components/Track";
 import tracksData from "appData";
-import { initPlaybackState, clickPlaybackState, tickPlaybackState } from 'playbackStateTransformer'
+import { initPlaybackState, startTransition, finalizeTransition } from 'playbackStateTransformer'
 import Tone from 'tone'
 
 const QUANTIZATION = "2m"
@@ -24,7 +24,7 @@ class App extends React.Component {
   _tick(time) {
     console.log(Tone.Transport.seconds.toFixed(2))
     this.setState(
-      tickPlaybackState,
+      finalizeTransition,
       this._stopTransportUnlessPlaying
     )
   }
@@ -48,7 +48,7 @@ class App extends React.Component {
 
   _handleClipClick(trackId, clipId) {
     this.setState(
-      clickPlaybackState(this.state, { trackId, clipId }),
+      startTransition(this.state, { trackId, clipId }),
       this._startTransport
     )
   }

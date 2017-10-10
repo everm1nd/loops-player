@@ -16,7 +16,7 @@ jest.mock('playbackStateMachine', () => (
   }
 ))
 
-import { initPlaybackState, clickPlaybackState, tickPlaybackState } from 'playbackStateTransformer'
+import { initPlaybackState, startTransition, finalizeTransition } from 'playbackStateTransformer'
 
 describe('playbackStateTransformer', () => {
   const state = {
@@ -37,9 +37,9 @@ describe('playbackStateTransformer', () => {
     });
   });
 
-  describe('.tickPlaybackState', () => {
+  describe('.finalizeTransition', () => {
     it('update state of all clips with value from state machine', () => {
-      expect(tickPlaybackState(state)).toEqual({
+      expect(finalizeTransition(state)).toEqual({
         tracks: [
           { clips: [{ playbackState: "foo" }] },
           { clips: [{ playbackState: "foo" }] }
@@ -48,14 +48,14 @@ describe('playbackStateTransformer', () => {
     });
   })
 
-  describe('.clickPlaybackState', () => {
+  describe('.startTransition', () => {
     it('updates state of selected clip with value from state machine', () => {
       const beforeClickState = {
         tracks: [
           { clips: [{ playbackState: "foo" }] }
         ]
       }
-      expect(clickPlaybackState(beforeClickState, { trackId: 0, clipId: 0 })).toEqual({
+      expect(startTransition(beforeClickState, { trackId: 0, clipId: 0 })).toEqual({
         tracks: [
           { clips: [{ playbackState: "bar" }] }
         ]
