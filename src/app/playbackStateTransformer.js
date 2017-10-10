@@ -18,29 +18,17 @@ const _transitionClip = ( appState, { trackId, clipId }) => (
   })
 )
 
-const _cancelStarting = ( appState, { trackId, clipId } ) => (
+const _transitionOtherClips = ( playbackState, appState, { trackId, clipId } ) => (
   _mapClipsState( appState, (track, clip) =>
-    clip.playbackState === "starting" && track.id === trackId && clip.id !== clipId ?
+    clip.playbackState === playbackState && track.id === trackId && clip.id !== clipId ?
       togglePlayback.onClick(clip.playbackState) :
       clip.playbackState
   )
 )
 
-const _cancelStarted = ( appState, { trackId, clipId } ) => (
-  _mapClipsState( appState, (track, clip) =>
-    clip.playbackState === "started" && track.id === trackId && clip.id !== clipId ?
-      togglePlayback.onClick(clip.playbackState) :
-      clip.playbackState
-  )
-)
-
-const _cancelStopping = ( appState, { trackId, clipId } ) => (
-  _mapClipsState( appState, (track, clip) =>
-    clip.playbackState === "stopping" && track.id === trackId && clip.id !== clipId ?
-      togglePlayback.onClick(clip.playbackState) :
-      clip.playbackState
-  )
-)
+const _cancelStarting = _transitionOtherClips.bind(null, "starting")
+const _cancelStarted = _transitionOtherClips.bind(null, "started")
+const _cancelStopping = _transitionOtherClips.bind(null, "stopping")
 
 const initPlaybackState = appState => _mapClipsState(appState, (track, clip) => "stopped")
 const tickPlaybackState = appState => _mapClipsState(appState, (track, clip) => togglePlayback.onTick(clip.playbackState))
@@ -52,7 +40,6 @@ const clickPlaybackState = ( appState, { trackId, clipId } ) => {
   state = _transitionClip(state, { trackId, clipId } )
   console.log(trackId, clipId, state.tracks[trackId].clips[clipId])
   if (state.tracks[trackId].clips[clipId].playbackState === "stopped") {
-    console.log('123')
     state = _cancelStopping(state, { trackId, clipId } )
   }
   return state
