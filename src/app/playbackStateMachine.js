@@ -14,12 +14,12 @@ export default {
         }
       case "started":
         return {
-          result: "stopping"
+          result: "stopping",
+          dependentStates: ["starting"]
         }
       case "stopping":
         return {
-          result: "started",
-          dependentStates: ["starting"]
+          result: "started"
         }
       default:
         return playbackState

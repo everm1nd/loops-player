@@ -12,7 +12,8 @@ describe("playbackStateMachine", () => {
 
       it('transition started clip to stopping', () => {
         expect(togglePlayback.onClick('started')).toEqual({
-          result: 'stopping'
+          result: 'stopping',
+          dependentStates: ["starting"]
         })
       })
     })
@@ -27,8 +28,7 @@ describe("playbackStateMachine", () => {
 
       it('transition stopping clip to started', () => {
         expect(togglePlayback.onClick('stopping')).toEqual({
-          result: 'started',
-          dependentStates: ["starting"]
+          result: 'started'
         })
       })
     })
