@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import Track from 'components/Track';
 import tracksData from "appData";
 
