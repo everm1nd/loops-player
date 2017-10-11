@@ -54,8 +54,8 @@ class App extends React.Component {
   }
 
   renderTracks() {
-    return this.state.tracks.map( (track, index) =>
-      <Track id={index} key={track.name} {...track} onClick={this._handleClipClick} />
+    return this.state.tracks.map(track =>
+      <Track key={track.name} {...track} onClick={this._handleClipClick} />
     )
   }
 
