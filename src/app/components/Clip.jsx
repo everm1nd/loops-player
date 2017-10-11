@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Tone from "tone";
 import Loader from 'react-loader-advanced';
+import Spinner from 'react-spinkit'
 import 'components/Clip/play-icon.svg'
 import 'components/Clip/stop-icon.svg'
 
@@ -26,11 +27,7 @@ class Clip extends React.Component {
   }
 
   _whenLoaded = () => {
-    const delay = Math.random() * 10 * 1000 * 100
-    console.log(delay)
-    setTimeout(() => {
-      this.setState({ loading: false })
-    }, delay)
+    this.setState({ loading: false })
   }
 
   _togglePlayback = () => {
@@ -52,7 +49,7 @@ class Clip extends React.Component {
 
   render() {
     const animationDuration = Tone.Time(this.props.duration).toSeconds()
-    const spinner = <span className="spinner">O</span>
+    const spinner = <Spinner name="line-scale" color="white" fadeIn="none" />
     return <Loader show={this.state.loading} hideContentOnLoad message={spinner}>
       <button className={`button clip ${this.props.playbackState}`} onClick={this.handleClick}>
         <Progress duration={animationDuration} className="progress" />

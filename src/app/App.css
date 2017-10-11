@@ -68,12 +68,6 @@
   background-size: 60px !important;
 }
 
-@keyframes spin {
-  from { transform:rotate(0deg); }
-  to { transform:rotate(360deg); }
-}
-
-.spinner {
-  display: block;
-  animation: spin 5000ms linear infinite;
+.Loader__background {
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }

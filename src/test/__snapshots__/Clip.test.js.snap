@@ -2,12 +2,15 @@
 
 exports[`Clip renders a clip 1`] = `
 <Loader
+  hideContentOnLoad={true}
   message={
-    <span
-      className="spinner"
-    >
-      loading
-    </span>
+    <Spinner
+      color="white"
+      fadeIn="none"
+      name="line-scale"
+      noFadeIn={false}
+      overrideSpinnerClassName=""
+    />
   }
   priority={0}
   show={true}
