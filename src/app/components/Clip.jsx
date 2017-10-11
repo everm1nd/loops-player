@@ -17,13 +17,18 @@ class Clip extends React.Component {
   constructor(props) {
     super(props)
     this.state = { loading: true }
-    this.player = new Tone.Player(
+    this.player = this._initPlayer(props)
+
+    this.handleClick = this.props.onClick.bind(null, this.props.id)
+  }
+
+  _initPlayer = (props) => {
+    const player = new Tone.Player(
       assetPath(props.url),
       this._whenLoaded
     ).toMaster();
-    this.player.loop = true;
-
-    this.handleClick = this.props.onClick.bind(null, this.props.id)
+    player.loop = true;
+    return player;
   }
 
   _whenLoaded = () => {
