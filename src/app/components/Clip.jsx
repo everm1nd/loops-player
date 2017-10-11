@@ -4,8 +4,7 @@ import styled from 'styled-components'
 import Tone from "tone";
 import Loader from 'react-loader-advanced';
 import Spinner from 'react-spinkit'
-import 'components/Clip/play-icon.svg'
-import 'components/Clip/stop-icon.svg'
+import 'components/Clip/Clip.css'
 
 const assetPath = url => process.env.PUBLIC_URL + url;
 
