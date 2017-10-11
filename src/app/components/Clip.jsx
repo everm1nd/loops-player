@@ -17,11 +17,10 @@ class Clip extends React.Component {
     this.player = new Tone.Player(assetPath(props.url)).toMaster();
     this.player.loop = true;
 
-    this._togglePlayback = this._togglePlayback.bind(this)
     this.handleClick = this.props.onClick.bind(null, this.props.id)
   }
 
-  _togglePlayback() {
+  _togglePlayback = () => {
     switch(this.props.playbackState) {
       case 'stopped':
         this.player.stop()

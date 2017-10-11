@@ -12,8 +12,6 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = initPlaybackState(tracksData)
-    this._handleClipClick = this._handleClipClick.bind(this)
-    this._tick = this._tick.bind(this)
 
     Tone.Transport.bpm.value = BPM;
   }
@@ -22,7 +20,7 @@ class App extends React.Component {
     Tone.Transport.scheduleRepeat(this._tick, QUANTIZATION);
   }
 
-  _tick(time) {
+  _tick = (time) => {
     console.log(Tone.Transport.seconds.toFixed(2))
     this.setState(
       finalizeTransition,
@@ -47,7 +45,7 @@ class App extends React.Component {
     }
   }
 
-  _handleClipClick(trackId, clipId) {
+  _handleClipClick = (trackId, clipId) => {
     this.setState(prevState => startTransition(prevState, { trackId, clipId }),
       this._startTransport
     )
