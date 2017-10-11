@@ -41,3 +41,8 @@
 .clip.starting, .clip.stopping {
   animation: blinker 1.5s ease-in-out infinite;
 }
+
+.clip.starting, .clip.started {
+  background: lightgrey url('components/Clip/stop-icon.svg') no-repeat center;
+  background-size: 60px !important;
+}

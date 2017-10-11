@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types"
 import Tone from "tone";
 import 'components/Clip/play-icon.svg'
+import 'components/Clip/stop-icon.svg'
 
 const assetPath = url => process.env.PUBLIC_URL + url;
 
