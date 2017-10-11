@@ -14,10 +14,11 @@ class App extends React.Component {
     this.state = initPlaybackState(tracksData)
     this._handleClipClick = this._handleClipClick.bind(this)
     this._tick = this._tick.bind(this)
+
+    Tone.Transport.bpm.value = BPM;
   }
 
   componentDidMount() {
-    Tone.Transport.bpm.value = BPM;
     Tone.Transport.scheduleRepeat(this._tick, QUANTIZATION);
   }
 

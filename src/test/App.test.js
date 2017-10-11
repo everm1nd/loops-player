@@ -14,6 +14,10 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('sets BPM to 110', () => {
+    expect(Tone.Transport.bpm.value).toEqual(110)
+  })
+
   describe('._handleClipClick', () => {
     it('assigns state from playbackStateMachine to clip state', () => {
       wrapper.instance()._handleClipClick(0,0)
