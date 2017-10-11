@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Clip
+    duration="2m"
     id={0}
     onClick={[Function]}
     playbackState="stopped"
@@ -22,8 +23,9 @@ ShallowWrapper {
     "key": null,
     "nodeType": "host",
     "props": Object {
-      "children": <div
+      "children": <styled.div
         className="progress"
+        duration="2m"
 />,
       "className": "button clip stopped",
       "onClick": [Function],
@@ -32,13 +34,14 @@ ShallowWrapper {
     "rendered": Object {
       "instance": null,
       "key": null,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "className": "progress",
+        "duration": "2m",
       },
       "ref": null,
       "rendered": null,
-      "type": "div",
+      "type": [Function],
     },
     "type": "button",
   },
@@ -48,8 +51,9 @@ ShallowWrapper {
       "key": null,
       "nodeType": "host",
       "props": Object {
-        "children": <div
+        "children": <styled.div
           className="progress"
+          duration="2m"
 />,
         "className": "button clip stopped",
         "onClick": [Function],
@@ -58,13 +62,14 @@ ShallowWrapper {
       "rendered": Object {
         "instance": null,
         "key": null,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
           "className": "progress",
+          "duration": "2m",
         },
         "ref": null,
         "rendered": null,
-        "type": "div",
+        "type": [Function],
       },
       "type": "button",
     },

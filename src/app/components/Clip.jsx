@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from "prop-types"
+import styled from 'styled-components'
 import Tone from "tone";
 import 'components/Clip/play-icon.svg'
 import 'components/Clip/stop-icon.svg'
 
 const assetPath = url => process.env.PUBLIC_URL + url;
+
+const Progress = styled.div`
+  animation-duration: ${props => Tone.Time(props.duration).toSeconds()}s !important
+`
 
 class Clip extends React.Component {
   constructor(props) {
@@ -35,7 +40,7 @@ class Clip extends React.Component {
 
   render() {
     return <button className={`button clip ${this.props.playbackState}`} onClick={this.handleClick}>
-      <div className="progress"></div>
+      <Progress duration={this.props.duration} className="progress" />
     </button>
   }
 }
@@ -48,7 +53,8 @@ Clip.propTypes = {
   id: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
   playbackState: PropTypes.string,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  duration: PropTypes.string.isRequired
 }
 
 export default Clip;

@@ -11,7 +11,10 @@ const Tone = {
     cancel: jest.fn(),
     seconds: 0,
     bpm: {}
-  }
+  },
+  Time: jest.fn(() => ({
+    toSeconds: jest.fn()
+  }))
 }
 
 export default Tone;

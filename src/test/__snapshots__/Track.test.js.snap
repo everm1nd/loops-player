@@ -8,11 +8,13 @@ ShallowWrapper {
     clips={
         Array [
             Object {
+              "duration": "2m",
               "id": 0,
               "name": "Funky Clip 1",
               "url": "funk.mp3",
             },
             Object {
+              "duration": "2m",
               "id": 1,
               "name": "Funky Clip 2",
               "url": "funk2.mp3",
@@ -44,6 +46,7 @@ ShallowWrapper {
 </h4>,
         Array [
           <Clip
+            duration="2m"
             id={0}
             name="Funky Clip 1"
             onClick={[Function]}
@@ -51,6 +54,7 @@ ShallowWrapper {
             url="funk.mp3"
 />,
           <Clip
+            duration="2m"
             id={1}
             name="Funky Clip 2"
             onClick={[Function]}
@@ -81,6 +85,7 @@ ShallowWrapper {
         "key": "Funky Clip 1",
         "nodeType": "class",
         "props": Object {
+          "duration": "2m",
           "id": 0,
           "name": "Funky Clip 1",
           "onClick": [Function],
@@ -96,6 +101,7 @@ ShallowWrapper {
         "key": "Funky Clip 2",
         "nodeType": "class",
         "props": Object {
+          "duration": "2m",
           "id": 1,
           "name": "Funky Clip 2",
           "onClick": [Function],
@@ -123,6 +129,7 @@ ShallowWrapper {
 </h4>,
           Array [
             <Clip
+              duration="2m"
               id={0}
               name="Funky Clip 1"
               onClick={[Function]}
@@ -130,6 +137,7 @@ ShallowWrapper {
               url="funk.mp3"
 />,
             <Clip
+              duration="2m"
               id={1}
               name="Funky Clip 2"
               onClick={[Function]}
@@ -160,6 +168,7 @@ ShallowWrapper {
           "key": "Funky Clip 1",
           "nodeType": "class",
           "props": Object {
+            "duration": "2m",
             "id": 0,
             "name": "Funky Clip 1",
             "onClick": [Function],
@@ -175,6 +184,7 @@ ShallowWrapper {
           "key": "Funky Clip 2",
           "nodeType": "class",
           "props": Object {
+            "duration": "2m",
             "id": 1,
             "name": "Funky Clip 2",
             "onClick": [Function],

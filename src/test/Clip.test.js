@@ -5,7 +5,7 @@ import Tone from 'tone';
 
 describe("Clip", () => {
   const onClickSpy = jest.fn()
-  const wrapper = shallow(<Clip id={0} url="something.wav" onClick={onClickSpy} />);
+  const wrapper = shallow(<Clip id={0} url="something.wav" onClick={onClickSpy} duration='2m' />);
 
   it('renders a clip', () => {
     expect(wrapper).toMatchSnapshot();

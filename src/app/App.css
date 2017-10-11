@@ -56,11 +56,11 @@
 }
 
 .clip.started > .progress {
-  animation: filler 4.3636363636s linear infinite;
+  animation: filler 4s linear infinite;
 }
 
 .clip.stopping > .progress {
-  animation: filler 4.3636363636s linear infinite;
+  animation: filler 4s linear infinite;
 }
 
 .clip.starting, .clip.started {
