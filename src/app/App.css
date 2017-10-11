@@ -34,14 +34,10 @@
   margin-bottom: 2px;
 }
 
-.clip.starting {
-  background-color: yellow;
+@keyframes blinker {
+  50% { opacity: 0.5; }
 }
 
-.clip.started {
-  background-color: deeppink;
-}
-
-.clip.stopping {
-  background-color: orange;
+.clip.starting, .clip.stopping {
+  animation: blinker 1.5s ease-in-out infinite;
 }
