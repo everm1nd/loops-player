@@ -8,7 +8,7 @@ import 'components/Clip/stop-icon.svg'
 const assetPath = url => process.env.PUBLIC_URL + url;
 
 const Progress = styled.div`
-  animation-duration: ${props => Tone.Time(props.duration).toSeconds()}s !important
+  animation-duration: ${props => props.duration}s !important
 `
 
 class Clip extends React.Component {
@@ -39,8 +39,9 @@ class Clip extends React.Component {
   }
 
   render() {
+    const animationDuration = Tone.Time(this.props.duration).toSeconds()
     return <button className={`button clip ${this.props.playbackState}`} onClick={this.handleClick}>
-      <Progress duration={this.props.duration} className="progress" />
+      <Progress duration={animationDuration} className="progress" />
     </button>
   }
 }

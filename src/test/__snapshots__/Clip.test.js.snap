@@ -25,7 +25,7 @@ ShallowWrapper {
     "props": Object {
       "children": <styled.div
         className="progress"
-        duration="2m"
+        duration={undefined}
 />,
       "className": "button clip stopped",
       "onClick": [Function],
@@ -37,7 +37,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "className": "progress",
-        "duration": "2m",
+        "duration": undefined,
       },
       "ref": null,
       "rendered": null,
@@ -53,7 +53,7 @@ ShallowWrapper {
       "props": Object {
         "children": <styled.div
           className="progress"
-          duration="2m"
+          duration={undefined}
 />,
         "className": "button clip stopped",
         "onClick": [Function],
@@ -65,7 +65,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "className": "progress",
-          "duration": "2m",
+          "duration": undefined,
         },
         "ref": null,
         "rendered": null,
