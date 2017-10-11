@@ -1,325 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders an app 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": null,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <Track
-          clips={
-                    Array [
-                              Object {
-                                "duration": "2m",
-                                "id": 0,
-                                "name": "Funky Clip 1",
-                                "playbackState": "stopped",
-                                "url": "/media/drums-1.wav",
-                              },
-                              Object {
-                                "duration": "4m",
-                                "id": 1,
-                                "name": "Funky Clip 2",
-                                "playbackState": "stopped",
-                                "url": "/media/drums-2.wav",
-                              },
-                              Object {
-                                "duration": "2m",
-                                "id": 2,
-                                "name": "Funky Clip 3",
-                                "playbackState": "stopped",
-                                "url": "/media/drums-1.wav",
-                              },
-                            ]
-          }
-          color="blue"
-          id={0}
-          name="Drums"
-          onClick={[Function]}
-/>,
-        <Track
-          clips={
-                    Array [
-                              Object {
-                                "duration": "2m",
-                                "id": 0,
-                                "name": "Soft Clip 1",
-                                "playbackState": "stopped",
-                                "url": "/media/melody-1.wav",
-                              },
-                              Object {
-                                "duration": "2m",
-                                "id": 1,
-                                "name": "Soft Clip 2",
-                                "playbackState": "stopped",
-                                "url": "/media/melody-2.wav",
-                              },
-                              Object {
-                                "duration": "2m",
-                                "id": 2,
-                                "name": "Soft Clip 3",
-                                "playbackState": "stopped",
-                                "url": "/media/melody-1.wav",
-                              },
-                            ]
-          }
-          color="deeppink"
-          id={1}
-          name="Melody"
-          onClick={[Function]}
-/>,
-      ],
-      "className": "app",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "Drums",
-        "nodeType": "function",
-        "props": Object {
-          "clips": Array [
-            Object {
-              "duration": "2m",
-              "id": 0,
-              "name": "Funky Clip 1",
-              "playbackState": "stopped",
-              "url": "/media/drums-1.wav",
-            },
-            Object {
-              "duration": "4m",
-              "id": 1,
-              "name": "Funky Clip 2",
-              "playbackState": "stopped",
-              "url": "/media/drums-2.wav",
-            },
-            Object {
-              "duration": "2m",
-              "id": 2,
-              "name": "Funky Clip 3",
-              "playbackState": "stopped",
-              "url": "/media/drums-1.wav",
-            },
-          ],
-          "color": "blue",
+<div
+  className="app"
+>
+  <Track
+    clips={
+      Array [
+        Object {
+          "duration": "2m",
           "id": 0,
-          "name": "Drums",
-          "onClick": [Function],
+          "name": "Funky Clip 1",
+          "playbackState": "stopped",
+          "url": "/media/drums-1.wav",
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "Melody",
-        "nodeType": "function",
-        "props": Object {
-          "clips": Array [
-            Object {
-              "duration": "2m",
-              "id": 0,
-              "name": "Soft Clip 1",
-              "playbackState": "stopped",
-              "url": "/media/melody-1.wav",
-            },
-            Object {
-              "duration": "2m",
-              "id": 1,
-              "name": "Soft Clip 2",
-              "playbackState": "stopped",
-              "url": "/media/melody-2.wav",
-            },
-            Object {
-              "duration": "2m",
-              "id": 2,
-              "name": "Soft Clip 3",
-              "playbackState": "stopped",
-              "url": "/media/melody-1.wav",
-            },
-          ],
-          "color": "deeppink",
+        Object {
+          "duration": "4m",
           "id": 1,
-          "name": "Melody",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": null,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <Track
-            clips={
-                        Array [
-                                    Object {
-                                      "duration": "2m",
-                                      "id": 0,
-                                      "name": "Funky Clip 1",
-                                      "playbackState": "stopped",
-                                      "url": "/media/drums-1.wav",
-                                    },
-                                    Object {
-                                      "duration": "4m",
-                                      "id": 1,
-                                      "name": "Funky Clip 2",
-                                      "playbackState": "stopped",
-                                      "url": "/media/drums-2.wav",
-                                    },
-                                    Object {
-                                      "duration": "2m",
-                                      "id": 2,
-                                      "name": "Funky Clip 3",
-                                      "playbackState": "stopped",
-                                      "url": "/media/drums-1.wav",
-                                    },
-                                  ]
-            }
-            color="blue"
-            id={0}
-            name="Drums"
-            onClick={[Function]}
-/>,
-          <Track
-            clips={
-                        Array [
-                                    Object {
-                                      "duration": "2m",
-                                      "id": 0,
-                                      "name": "Soft Clip 1",
-                                      "playbackState": "stopped",
-                                      "url": "/media/melody-1.wav",
-                                    },
-                                    Object {
-                                      "duration": "2m",
-                                      "id": 1,
-                                      "name": "Soft Clip 2",
-                                      "playbackState": "stopped",
-                                      "url": "/media/melody-2.wav",
-                                    },
-                                    Object {
-                                      "duration": "2m",
-                                      "id": 2,
-                                      "name": "Soft Clip 3",
-                                      "playbackState": "stopped",
-                                      "url": "/media/melody-1.wav",
-                                    },
-                                  ]
-            }
-            color="deeppink"
-            id={1}
-            name="Melody"
-            onClick={[Function]}
-/>,
-        ],
-        "className": "app",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "Drums",
-          "nodeType": "function",
-          "props": Object {
-            "clips": Array [
-              Object {
-                "duration": "2m",
-                "id": 0,
-                "name": "Funky Clip 1",
-                "playbackState": "stopped",
-                "url": "/media/drums-1.wav",
-              },
-              Object {
-                "duration": "4m",
-                "id": 1,
-                "name": "Funky Clip 2",
-                "playbackState": "stopped",
-                "url": "/media/drums-2.wav",
-              },
-              Object {
-                "duration": "2m",
-                "id": 2,
-                "name": "Funky Clip 3",
-                "playbackState": "stopped",
-                "url": "/media/drums-1.wav",
-              },
-            ],
-            "color": "blue",
-            "id": 0,
-            "name": "Drums",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "name": "Funky Clip 2",
+          "playbackState": "stopped",
+          "url": "/media/drums-2.wav",
         },
         Object {
-          "instance": null,
-          "key": "Melody",
-          "nodeType": "function",
-          "props": Object {
-            "clips": Array [
-              Object {
-                "duration": "2m",
-                "id": 0,
-                "name": "Soft Clip 1",
-                "playbackState": "stopped",
-                "url": "/media/melody-1.wav",
-              },
-              Object {
-                "duration": "2m",
-                "id": 1,
-                "name": "Soft Clip 2",
-                "playbackState": "stopped",
-                "url": "/media/melody-2.wav",
-              },
-              Object {
-                "duration": "2m",
-                "id": 2,
-                "name": "Soft Clip 3",
-                "playbackState": "stopped",
-                "url": "/media/melody-1.wav",
-              },
-            ],
-            "color": "deeppink",
-            "id": 1,
-            "name": "Melody",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "duration": "2m",
+          "id": 2,
+          "name": "Funky Clip 3",
+          "playbackState": "stopped",
+          "url": "/media/drums-1.wav",
         },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
+      ]
+    }
+    color="blue"
+    id={0}
+    key="Drums"
+    name="Drums"
+    onClick={[Function]}
+  />
+  <Track
+    clips={
+      Array [
+        Object {
+          "duration": "2m",
+          "id": 0,
+          "name": "Soft Clip 1",
+          "playbackState": "stopped",
+          "url": "/media/melody-1.wav",
+        },
+        Object {
+          "duration": "2m",
+          "id": 1,
+          "name": "Soft Clip 2",
+          "playbackState": "stopped",
+          "url": "/media/melody-2.wav",
+        },
+        Object {
+          "duration": "2m",
+          "id": 2,
+          "name": "Soft Clip 3",
+          "playbackState": "stopped",
+          "url": "/media/melody-1.wav",
+        },
+      ]
+    }
+    color="deeppink"
+    id={1}
+    key="Melody"
+    name="Melody"
+    onClick={[Function]}
+  />
+</div>
 `;

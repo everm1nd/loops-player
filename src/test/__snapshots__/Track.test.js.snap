@@ -1,210 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Track renders a track 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Track
-    clips={
-        Array [
-            Object {
-              "duration": "2m",
-              "id": 0,
-              "name": "Funky Clip 1",
-              "url": "funk.mp3",
-            },
-            Object {
-              "duration": "2m",
-              "id": 1,
-              "name": "Funky Clip 2",
-              "url": "funk2.mp3",
-            },
-          ]
-    }
-    color="deeppink"
+<styled.div
+  className="track"
+  color="deeppink"
+>
+  <h4
+    className="title"
+  >
+    Track 1
+  </h4>
+  <Clip
+    duration="2m"
     id={0}
-    name="Track 1"
+    key="Funky Clip 1"
+    name="Funky Clip 1"
     onClick={[Function]}
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": null,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <h4
-          className="title"
->
-          Track 1
-</h4>,
-        Array [
-          <Clip
-            duration="2m"
-            id={0}
-            name="Funky Clip 1"
-            onClick={[Function]}
-            playbackState="stopped"
-            url="funk.mp3"
-/>,
-          <Clip
-            duration="2m"
-            id={1}
-            name="Funky Clip 2"
-            onClick={[Function]}
-            playbackState="stopped"
-            url="funk2.mp3"
-/>,
-        ],
-      ],
-      "className": "track",
-      "color": "deeppink",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Track 1",
-          "className": "title",
-        },
-        "ref": null,
-        "rendered": "Track 1",
-        "type": "h4",
-      },
-      Object {
-        "instance": null,
-        "key": "Funky Clip 1",
-        "nodeType": "class",
-        "props": Object {
-          "duration": "2m",
-          "id": 0,
-          "name": "Funky Clip 1",
-          "onClick": [Function],
-          "playbackState": "stopped",
-          "url": "funk.mp3",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "Funky Clip 2",
-        "nodeType": "class",
-        "props": Object {
-          "duration": "2m",
-          "id": 1,
-          "name": "Funky Clip 2",
-          "onClick": [Function],
-          "playbackState": "stopped",
-          "url": "funk2.mp3",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": null,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <h4
-            className="title"
->
-            Track 1
-</h4>,
-          Array [
-            <Clip
-              duration="2m"
-              id={0}
-              name="Funky Clip 1"
-              onClick={[Function]}
-              playbackState="stopped"
-              url="funk.mp3"
-/>,
-            <Clip
-              duration="2m"
-              id={1}
-              name="Funky Clip 2"
-              onClick={[Function]}
-              playbackState="stopped"
-              url="funk2.mp3"
-/>,
-          ],
-        ],
-        "className": "track",
-        "color": "deeppink",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Track 1",
-            "className": "title",
-          },
-          "ref": null,
-          "rendered": "Track 1",
-          "type": "h4",
-        },
-        Object {
-          "instance": null,
-          "key": "Funky Clip 1",
-          "nodeType": "class",
-          "props": Object {
-            "duration": "2m",
-            "id": 0,
-            "name": "Funky Clip 1",
-            "onClick": [Function],
-            "playbackState": "stopped",
-            "url": "funk.mp3",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "Funky Clip 2",
-          "nodeType": "class",
-          "props": Object {
-            "duration": "2m",
-            "id": 1,
-            "name": "Funky Clip 2",
-            "onClick": [Function],
-            "playbackState": "stopped",
-            "url": "funk2.mp3",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
+    playbackState="stopped"
+    url="funk.mp3"
+  />
+  <Clip
+    duration="2m"
+    id={1}
+    key="Funky Clip 2"
+    name="Funky Clip 2"
+    onClick={[Function]}
+    playbackState="stopped"
+    url="funk2.mp3"
+  />
+</styled.div>
 `;
