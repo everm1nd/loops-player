@@ -32,6 +32,19 @@
   background-size: 80px;
   cursor: pointer;
   margin-bottom: 2px;
+  padding: 0;
+}
+
+@keyframes filler {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.clip > .progress {
+  width: 0;
+  height: 100%;
+  background: white;
+  opacity: 0.3;
 }
 
 @keyframes blinker {
@@ -40,6 +53,14 @@
 
 .clip.starting, .clip.stopping {
   animation: blinker 1.5s ease-in-out infinite;
+}
+
+.clip.started > .progress {
+  animation: filler 4.3636363636s linear infinite;
+}
+
+.clip.stopping > .progress {
+  animation: filler 4.3636363636s linear infinite;
 }
 
 .clip.starting, .clip.started {
