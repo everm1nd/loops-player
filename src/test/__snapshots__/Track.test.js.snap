@@ -19,6 +19,7 @@ ShallowWrapper {
             },
           ]
     }
+    color="deeppink"
     id={0}
     name="Track 1"
     onClick={[Function]}
@@ -33,7 +34,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": null,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
       "children": Array [
         <h4
@@ -59,6 +60,7 @@ ShallowWrapper {
         ],
       ],
       "className": "track",
+      "color": "deeppink",
     },
     "ref": null,
     "rendered": Array [
@@ -105,13 +107,13 @@ ShallowWrapper {
         "type": [Function],
       },
     ],
-    "type": "div",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": null,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
           <h4
@@ -137,6 +139,7 @@ ShallowWrapper {
           ],
         ],
         "className": "track",
+        "color": "deeppink",
       },
       "ref": null,
       "rendered": Array [
@@ -183,7 +186,7 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

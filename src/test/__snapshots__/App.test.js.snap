@@ -41,6 +41,7 @@ ShallowWrapper {
                               },
                             ]
           }
+          color="blue"
           id={0}
           name="Drums"
           onClick={[Function]}
@@ -68,6 +69,7 @@ ShallowWrapper {
                               },
                             ]
           }
+          color="deeppink"
           id={1}
           name="Melody"
           onClick={[Function]}
@@ -102,6 +104,7 @@ ShallowWrapper {
               "url": "/media/drums-1.wav",
             },
           ],
+          "color": "blue",
           "id": 0,
           "name": "Drums",
           "onClick": [Function],
@@ -135,6 +138,7 @@ ShallowWrapper {
               "url": "/media/melody-1.wav",
             },
           ],
+          "color": "deeppink",
           "id": 1,
           "name": "Melody",
           "onClick": [Function],
@@ -176,6 +180,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            color="blue"
             id={0}
             name="Drums"
             onClick={[Function]}
@@ -203,6 +208,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            color="deeppink"
             id={1}
             name="Melody"
             onClick={[Function]}
@@ -237,6 +243,7 @@ ShallowWrapper {
                 "url": "/media/drums-1.wav",
               },
             ],
+            "color": "blue",
             "id": 0,
             "name": "Drums",
             "onClick": [Function],
@@ -270,6 +277,7 @@ ShallowWrapper {
                 "url": "/media/melody-1.wav",
               },
             ],
+            "color": "deeppink",
             "id": 1,
             "name": "Melody",
             "onClick": [Function],

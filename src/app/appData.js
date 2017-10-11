@@ -2,6 +2,7 @@ export default {
   tracks: [
     {
       name: "Drums",
+      color: 'blue',
       clips: [
         { name: "Funky Clip 1", url: '/media/drums-1.wav' },
         { name: "Funky Clip 2", url: '/media/drums-2.wav' },
