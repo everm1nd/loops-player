@@ -13,7 +13,7 @@ export default {
       name: "Melody",
       clips: [
         { name: "Soft Clip 1", url: '/media/melody-1.wav' },
-        { name: "Soft Clip 2", url: '/media/melody-1.wav' },
+        { name: "Soft Clip 2", url: '/media/melody-2.wav' },
         { name: "Soft Clip 3", url: '/media/melody-1.wav' }
       ]
     }

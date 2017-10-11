@@ -59,7 +59,7 @@ ShallowWrapper {
                                 "id": 1,
                                 "name": "Soft Clip 2",
                                 "playbackState": "stopped",
-                                "url": "/media/melody-1.wav",
+                                "url": "/media/melody-2.wav",
                               },
                               Object {
                                 "id": 2,
@@ -129,7 +129,7 @@ ShallowWrapper {
               "id": 1,
               "name": "Soft Clip 2",
               "playbackState": "stopped",
-              "url": "/media/melody-1.wav",
+              "url": "/media/melody-2.wav",
             },
             Object {
               "id": 2,
@@ -198,7 +198,7 @@ ShallowWrapper {
                                       "id": 1,
                                       "name": "Soft Clip 2",
                                       "playbackState": "stopped",
-                                      "url": "/media/melody-1.wav",
+                                      "url": "/media/melody-2.wav",
                                     },
                                     Object {
                                       "id": 2,
@@ -268,7 +268,7 @@ ShallowWrapper {
                 "id": 1,
                 "name": "Soft Clip 2",
                 "playbackState": "stopped",
-                "url": "/media/melody-1.wav",
+                "url": "/media/melody-2.wav",
               },
               Object {
                 "id": 2,
