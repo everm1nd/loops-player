@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Tone from "tone";
+import Loader from 'react-loader-advanced';
 import 'components/Clip/play-icon.svg'
 import 'components/Clip/stop-icon.svg'
 
@@ -14,10 +15,22 @@ const Progress = styled.div`
 class Clip extends React.Component {
   constructor(props) {
     super(props)
-    this.player = new Tone.Player(assetPath(props.url)).toMaster();
+    this.state = { loading: true }
+    this.player = new Tone.Player(
+      assetPath(props.url),
+      this._whenLoaded
+    ).toMaster();
     this.player.loop = true;
 
     this.handleClick = this.props.onClick.bind(null, this.props.id)
+  }
+
+  _whenLoaded = () => {
+    const delay = Math.random() * 10 * 1000 * 100
+    console.log(delay)
+    setTimeout(() => {
+      this.setState({ loading: false })
+    }, delay)
   }
 
   _togglePlayback = () => {
@@ -39,9 +52,12 @@ class Clip extends React.Component {
 
   render() {
     const animationDuration = Tone.Time(this.props.duration).toSeconds()
-    return <button className={`button clip ${this.props.playbackState}`} onClick={this.handleClick}>
-      <Progress duration={animationDuration} className="progress" />
-    </button>
+    const spinner = <span className="spinner">O</span>
+    return <Loader show={this.state.loading} hideContentOnLoad message={spinner}>
+      <button className={`button clip ${this.props.playbackState}`} onClick={this.handleClick}>
+        <Progress duration={animationDuration} className="progress" />
+      </button>
+    </Loader>
   }
 }
 

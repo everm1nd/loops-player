@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Clip from 'components/Clip'
 
 const TrackWrapper = styled.div`
-  & > .clip.started, .clip.starting, .clip.stopping {
+  .clip.started, .clip.starting, .clip.stopping {
     background-color: ${props => props.color};
   }
 `

@@ -1,12 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Clip renders a clip 1`] = `
-<button
-  className="button clip stopped"
-  onClick={[Function]}
+<Loader
+  message={
+    <span
+      className="spinner"
+    >
+      loading
+    </span>
+  }
+  priority={0}
+  show={true}
 >
-  <styled.div
-    className="progress"
-  />
-</button>
+  <button
+    className="button clip stopped"
+    onClick={[Function]}
+  >
+    <styled.div
+      className="progress"
+    />
+  </button>
+</Loader>
 `;

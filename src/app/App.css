@@ -40,7 +40,7 @@
   to { width: 100%; }
 }
 
-.clip > .progress {
+.clip .progress {
   width: 0;
   height: 100%;
   background: white;
@@ -55,15 +55,25 @@
   animation: blinker 1.5s ease-in-out infinite;
 }
 
-.clip.started > .progress {
+.clip.started .progress {
   animation: filler 4s linear infinite;
 }
 
-.clip.stopping > .progress {
+.clip.stopping .progress {
   animation: filler 4s linear infinite;
 }
 
 .clip.starting, .clip.started {
   background: lightgrey url('components/Clip/stop-icon.svg') no-repeat center;
   background-size: 60px !important;
+}
+
+@keyframes spin {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+
+.spinner {
+  display: block;
+  animation: spin 5000ms linear infinite;
 }
