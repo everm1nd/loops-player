@@ -40,21 +40,21 @@ exports[`App renders an app 1`] = `
     clips={
       Array [
         Object {
-          "duration": "2m",
+          "duration": "4m",
           "id": 0,
           "name": "Synth Melody",
           "playbackState": "stopped",
           "url": "/media/melody-synth-1-4m.ogg",
         },
         Object {
-          "duration": "2m",
+          "duration": "4m",
           "id": 1,
           "name": "Guitar Melody",
           "playbackState": "stopped",
           "url": "/media/melody-guitar-2-4m.ogg",
         },
         Object {
-          "duration": "2m",
+          "duration": "8m",
           "id": 2,
           "name": "Synth Pulse Melody",
           "playbackState": "stopped",

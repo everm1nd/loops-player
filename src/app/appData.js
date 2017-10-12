@@ -12,9 +12,9 @@ export default {
     {
       name: "Melody",
       clips: [
-        { name: "Synth Melody", url: '/media/melody-synth-1-4m.ogg', duration: '2m' },
-        { name: "Guitar Melody", url: '/media/melody-guitar-2-4m.ogg', duration: '2m' },
-        { name: "Synth Pulse Melody", url: '/media/melody-pulse-3-8m.ogg', duration: '2m' }
+        { name: "Synth Melody", url: '/media/melody-synth-1-4m.ogg', duration: '4m' },
+        { name: "Guitar Melody", url: '/media/melody-guitar-2-4m.ogg', duration: '4m' },
+        { name: "Synth Pulse Melody", url: '/media/melody-pulse-3-8m.ogg', duration: '8m' }
       ]
     },
     {
