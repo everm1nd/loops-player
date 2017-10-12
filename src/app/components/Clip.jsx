@@ -26,6 +26,9 @@ class Clip extends React.Component {
       assetPath(props.url),
       this._whenLoaded
     ).toMaster();
+    player.setLoopPoints(0, props.duration)
+    player.fadeIn = '0.01s';
+    player.fadeOut = '0.05s';
     player.loop = true;
     return player;
   }
