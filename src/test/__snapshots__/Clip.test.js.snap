@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clip renders a clip 1`] = `
+<Loader
+  hideContentOnLoad={true}
+  message={
+    <Spinner
+      color="white"
+      fadeIn="none"
+      name="line-scale"
+      noFadeIn={false}
+      overrideSpinnerClassName=""
+    />
+  }
+  priority={0}
+  show={true}
+>
+  <button
+    className="button clip stopped"
+    onClick={[Function]}
+  >
+    <styled.div
+      className="progress"
+    />
+  </button>
+</Loader>
+`;
