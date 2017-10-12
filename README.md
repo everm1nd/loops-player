@@ -20,7 +20,11 @@ Run `yarn start`. This will start a web server and open it's front-page in your 
 
 You can build a production version running `yarn build`. Output will be in `build/`. You can open `index.html` in your browser, but you need to use Firefox or Chrome with `--allow-file-access-from-files`, because by default reading files from local filesystem with AJAX is not allowed (AJAX is used to fetch media files).
 
-Normally, you just need to put this files on any web-server and then they will be served correctly. AJAX will be working, as media files will be accessed over HTTP/S protocol.
+Normally, you just need to put this files on any web-server and then they will be served correctly. AJAX will be working, as media files will be accessed over HTTP/S protocol. You can try it locally in 30 seconds, running:
+```bash
+  npm install -g http-server
+  http-server ./build
+```
 
 ## Testing
 
