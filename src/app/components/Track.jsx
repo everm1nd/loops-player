@@ -12,7 +12,7 @@ const TrackWrapper = styled.div`
 
 const Track = ({ id, name, color, clips, onClick }) => <TrackWrapper color={color} className="track">
   <h4 className="title">{ name }</h4>
-  { clips.map(clip => <Clip key={clip.name} {...clip} onClick={onClick.bind(null, id)} /> )}
+  { clips.map(clip => <Clip key={clip.id} {...clip} onClick={onClick.bind(null, id)} /> )}
 </TrackWrapper>
 
 Track.defaultProps = {

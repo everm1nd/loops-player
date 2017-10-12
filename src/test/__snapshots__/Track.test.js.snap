@@ -13,7 +13,7 @@ exports[`Track renders a track 1`] = `
   <Clip
     duration="2m"
     id={0}
-    key="Funky Clip 1"
+    key="0"
     name="Funky Clip 1"
     onClick={[Function]}
     playbackState="stopped"
@@ -22,7 +22,7 @@ exports[`Track renders a track 1`] = `
   <Clip
     duration="2m"
     id={1}
-    key="Funky Clip 2"
+    key="1"
     name="Funky Clip 2"
     onClick={[Function]}
     playbackState="stopped"

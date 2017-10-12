@@ -8,31 +8,31 @@ exports[`App renders an app 1`] = `
     clips={
       Array [
         Object {
-          "duration": "2m",
+          "duration": "4m",
           "id": 0,
           "name": "Funky Clip 1",
           "playbackState": "stopped",
-          "url": "/media/drums-1.wav",
+          "url": "/media/drums-electronic-1-4m.ogg",
         },
         Object {
           "duration": "4m",
           "id": 1,
           "name": "Funky Clip 2",
           "playbackState": "stopped",
-          "url": "/media/drums-2.wav",
+          "url": "/media/drums-acoustic-2-4m.ogg",
         },
         Object {
-          "duration": "2m",
+          "duration": "4m",
           "id": 2,
           "name": "Funky Clip 3",
           "playbackState": "stopped",
-          "url": "/media/drums-1.wav",
+          "url": "/media/drums-vermona-3-4m.ogg",
         },
       ]
     }
     color="blue"
     id={0}
-    key="Drums"
+    key="0"
     name="Drums"
     onClick={[Function]}
   />
@@ -44,28 +44,60 @@ exports[`App renders an app 1`] = `
           "id": 0,
           "name": "Soft Clip 1",
           "playbackState": "stopped",
-          "url": "/media/melody-1.wav",
+          "url": "/media/melody-synth-1-4m.ogg",
         },
         Object {
           "duration": "2m",
           "id": 1,
           "name": "Soft Clip 2",
           "playbackState": "stopped",
-          "url": "/media/melody-2.wav",
+          "url": "/media/melody-guitar-2-4m.ogg",
         },
         Object {
           "duration": "2m",
           "id": 2,
           "name": "Soft Clip 3",
           "playbackState": "stopped",
-          "url": "/media/melody-1.wav",
+          "url": "/media/melody-pulse-3-8m.ogg",
         },
       ]
     }
     color="deeppink"
     id={1}
-    key="Melody"
+    key="1"
     name="Melody"
+    onClick={[Function]}
+  />
+  <Track
+    clips={
+      Array [
+        Object {
+          "duration": "4m",
+          "id": 0,
+          "name": "Bass Guitar 2",
+          "playbackState": "stopped",
+          "url": "/media/bass-synth-1-4m.ogg",
+        },
+        Object {
+          "duration": "2m",
+          "id": 1,
+          "name": "Bass Guitar 2",
+          "playbackState": "stopped",
+          "url": "/media/bass-guitar-2-2m.ogg",
+        },
+        Object {
+          "duration": "16m",
+          "id": 2,
+          "name": "Soft Clip 3",
+          "playbackState": "stopped",
+          "url": "/media/bass-drone-3-16m.ogg",
+        },
+      ]
+    }
+    color="Orange"
+    id={2}
+    key="2"
+    name="Bass"
     onClick={[Function]}
   />
 </div>
